@@ -48,14 +48,6 @@
     }
   }
 
-  onMount(async function () {
-    // setTimeout(() => {
-    //   data = getCharity(params.id);
-    // }, 2500);
-
-    charity = await getCharity(params.id);
-  });
-
   // const tick = setInterval(() => {
   //   seconds += 1;
   //   console.log(seconds);
