@@ -2,7 +2,8 @@
 /public/build/
 
 .DS_Store
-.vercel
 
 # Local Netlify folder
 .netlify
+.env
+
