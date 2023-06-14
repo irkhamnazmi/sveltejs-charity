@@ -14,16 +14,18 @@
           </p>
           <ul class="xs-social-list-v2">
             <li>
-              <a href="" class="color-facebook"><i class="fa fa-facebook" /></a>
+              <a href="/" class="color-facebook"><i class="fa fa-facebook" /></a
+              >
             </li>
             <li>
-              <a href="" class="color-twitter"><i class="fa fa-twitter" /></a>
+              <a href="/" class="color-twitter"><i class="fa fa-twitter" /></a>
             </li>
             <li>
-              <a href="" class="color-dribbble"><i class="fa fa-dribbble" /></a>
+              <a href="/" class="color-dribbble"><i class="fa fa-dribbble" /></a
+              >
             </li>
             <li>
-              <a href="" class="color-pinterest"
+              <a href="/" class="color-pinterest"
                 ><i class="fa fa-pinterest" /></a
               >
             </li>
@@ -34,10 +36,10 @@
           <h3 class="widget-title">About Us</h3>
           <ul class="xs-footer-list">
             <li><a href="/">About employee</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/">How it works</a></li>
+            <li><a href="/">Careers</a></li>
+            <li><a href="/">Press</a></li>
+            <li><a href="/">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -74,9 +76,9 @@
         <div class="col-md-6">
           <nav class="xs-footer-menu">
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Help Desk</a></li>
-              <li><a href="#">Support</a></li>
+              <li><a href="/">FAQ</a></li>
+              <li><a href="/">Help Desk</a></li>
+              <li><a href="/">Support</a></li>
             </ul>
           </nav>
         </div>
@@ -84,6 +86,6 @@
     </div>
   </div>
   <div class="xs-back-to-top-wraper">
-    <a href="#" class="xs-back-to-top"><i class="fa fa-angle-up" /></a>
+    <a href="/" class="xs-back-to-top"><i class="fa fa-angle-up" /></a>
   </div>
 </footer>
