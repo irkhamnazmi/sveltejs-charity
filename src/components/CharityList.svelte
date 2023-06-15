@@ -1,9 +1,16 @@
 <!-- End popularCauses section -->
 
 <script>
-  import { onMount, onDestroy, beforeUpdate, afterUpdate } from "svelte";
+  import { charities } from "../stores/data";
+  import Loader from "./Loader.svelte";
   import Modal from "./Modal.svelte";
-  export let charities;
+
+  let data = [];
+
+  charities.subscribe(function (value) {
+    data = value;
+    console.log(data);
+  });
 
   let isModalOpen = false;
 
@@ -50,7 +57,7 @@
     <!-- .row end -->
     <!-- {#if charities !== undefined} -->
     <div class="row">
-      {#each charities as charity}
+      {#each data as charity}
         <div class="col-lg-4 col-md-6">
           {#if isModalOpen === true}
             <Modal>
@@ -207,6 +214,8 @@
           </div>
           <!-- .xs-popular-item END -->
         </div>
+      {:else}
+        <Loader />
       {/each}
     </div>
     <!-- {/if} -->
