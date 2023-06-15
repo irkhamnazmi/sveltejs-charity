@@ -7,10 +7,15 @@
   import Loader from "../components/Loader.svelte";
   import { charities } from "../data/charities";
 
-  let amount,
+  let amount = 0,
     name,
     email,
-    agree = false;
+    agree = false,
+    contribute = 0;
+
+  $: if (charity) {
+    contribute = Math.floor((parseInt(amount) / $charity.target) * 100);
+  }
 
   getCharity($params.id);
 
@@ -19,6 +24,7 @@
   }
 
   async function handleForm(event) {
+    agree = false;
     try {
       // charity.pledged = charity.pledged + parseInt(amount);
       const res = await fetch(
@@ -116,6 +122,11 @@
                   >" site. By calling
                   <span class="color-green">+44(0) 800 883 8450</span>.
                 </p>
+                <h5>
+                  Your donation will be contributing <strong
+                    >{contribute}%</strong
+                  > of total current donation.
+                </h5>
                 <span class="xs-separetor v2" />
               </div>
               <!-- .xs-heading end -->

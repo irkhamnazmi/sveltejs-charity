@@ -7,4 +7,10 @@ const app = new App({
     }
 });
 
+window.initMap = function () {
+    app.$set({
+        ready: true
+    })
+}
+
 export default app;

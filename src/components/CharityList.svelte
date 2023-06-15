@@ -1,6 +1,5 @@
-<!-- End popularCauses section -->
-
 <script>
+  import { fade, slide, fly } from "svelte/transition";
   import { charities } from "../stores/data";
   import Loader from "./Loader.svelte";
   import Modal from "./Modal.svelte";
@@ -58,7 +57,11 @@
     <!-- {#if charities !== undefined} -->
     <div class="row">
       {#each data as charity}
-        <div class="col-lg-4 col-md-6">
+        <div
+          class="col-lg-4 col-md-6"
+          in:slide={{ delay: 1000 }}
+          out:fade={{ delay: 1000 }}
+        >
           {#if isModalOpen === true}
             <Modal>
               <!-- modal goes here -->
@@ -149,8 +152,14 @@
               <img src={charity.thumbnail} alt="" />
 
               <div class="xs-skill-bar">
-                <div class="xs-skill-track">
-                  <p>
+                <div
+                  class="xs-skill-track"
+                  style="width: {calculateFunded(
+                    charity.pledged,
+                    charity.target
+                  )}%;"
+                >
+                  <p in:fly={{ delay: 3500, x: -100 }} style="left: 100%">
                     <span
                       class="number-percentage-count number-percentage"
                       data-value="90"
